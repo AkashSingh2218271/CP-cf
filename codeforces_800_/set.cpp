@@ -13,8 +13,12 @@ int main() {
 
         int greatest_number = r / k;
         int ans = greatest_number - l + 1;
-
-        cout << ans << endl;
+        
+        if (ans < 0) {
+            cout << 0 << endl;
+        } else {
+            cout << ans << endl;
+        }
     }
 
     return 0;
