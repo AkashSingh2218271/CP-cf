@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -10,13 +11,10 @@ int main() {
     {
         int n, k;
         cin >> n >> k;
-        int m[n][n];
-
+        vector<string> m(n);
+        
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++)
-            {
-                cin >> m[i][j];
-            }
+            cin >> m[i];
         }
 
         for (int i = 0; i < n; i += k) {
