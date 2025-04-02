@@ -1,15 +1,29 @@
+// Problem: Sliding - Calculate total distance moved by all people when one person leaves
+// Input: Number of test cases t, followed by t cases containing:
+//        n (rows), m (columns), r (row of leaving person), c (column of leaving person)
+// Output: For each test case, print total distance moved by all people
+
 #include <iostream>
 using namespace std;
 
 int main() {
+    // Read number of test cases
     int t;
     cin >> t;
 
+    // Process each test case
     while (t--)
     {
+        // Read grid dimensions and leaving person's position
         long long n, m, r, c;
         cin >> n >> m >> r >> c;
 
+        // Calculate total distance using formula:
+        // (n-r) * (2*m-1) + (m-c)
+        // where:
+        // (n-r) is number of rows below current row
+        // (2*m-1) is distance for each row below (m-1 for moving right + 1 for moving up)
+        // (m-c) is remaining distance in current row
         long long distance = (n - r) * (2 * m - 1) + (m - c);
         cout << distance << endl;
     }
@@ -18,11 +32,12 @@ int main() {
 }
 
 /*
-(n - r) row below curr leaving person row.
-(m - 1) + 1 distance traveled by first person of each row to go to the last place of previous row.
-(m - c) distance traveled by remaining person in the current row.
-(m - 1) distance traveled by each person except first person in every row below the current row.
-current row -> the row from where person moved.
+Alternative solution (commented out) using brute force:
+1. For each person in the grid:
+   - Skip the leaving person
+   - Calculate their old and new positions
+   - Add Manhattan distance between old and new positions
+2. This solution is more intuitive but less efficient
 */
 
 /*
