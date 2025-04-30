@@ -1,7 +1,8 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     },
     "github.copilot.advanced": {
         "useLanguageServer": false
