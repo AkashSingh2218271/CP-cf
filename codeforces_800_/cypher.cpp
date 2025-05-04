@@ -20,7 +20,7 @@ int main()
         {
             int x;
             cin >> x;
-            for (int j = 0; j < x; j++)  // FIXED: changed loop variable to j
+            for (int j = 0; j < x; j++) 
             {
                 char c;
                 cin >> c;
